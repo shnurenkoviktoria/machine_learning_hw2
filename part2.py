@@ -66,7 +66,7 @@ joblib.dump(model, "linear_regression_model_normalized.joblib")
 
 
 def calculate_loss(y, h_x):
-    loss = np.sqrt(np.sum((h_x - y) ** 2) / len(y))
+    loss = np.sum((h_x - y) ** 2) / 2*len(y)
     return loss
 
 
